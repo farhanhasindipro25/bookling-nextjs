@@ -9,7 +9,8 @@ export default function BentoGridGallery() {
           A VISUAL FEAST
         </span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4">
+
+      <div className="grid-cols-3 md:grid-cols-5 gap-4 grid">
         <Image
           src="/assets/gallery/img8.jpg"
           alt="bento-1"
