@@ -72,7 +72,7 @@ export default function SmallScreenHero() {
           />
         </div>
       </div>
-      <div className="w-full max-w-7xl px-6 mx-auto pt-4 pb-16 flex flex-col gap-4 h-full">
+      <div className="w-full pt-4 pb-16 flex flex-col gap-4 h-full">
         <Image
           src="/assets/gallery/banner2.jpg"
           alt="main-banner"
