@@ -1,5 +1,5 @@
 import { getDateInDMYFormat } from "@/app/utils/UtilsKit";
-import Badge from "@/components/providers/Badge";
+import Badge from "@/components/Badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
