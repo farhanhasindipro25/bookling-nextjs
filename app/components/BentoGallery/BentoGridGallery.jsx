@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BentoGridGallery() {
   return (
-    <div className="space-y-4 md:space-y-12">
+    <div className="space-y-4 md:space-y-12 pt-40">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-blue-950">
         LITERARY TREASURES
         <span className="text-xl md:text-3xl lg:text-4xl ml-4 text-blue-700">
@@ -16,6 +16,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -23,6 +24,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full md:col-span-2 object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -30,6 +32,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -37,6 +40,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -44,6 +48,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full md:col-span-2 object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -51,6 +56,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -58,6 +64,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -65,6 +72,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -72,6 +80,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full object-cover md:h-3/4 aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -79,6 +88,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full h-full md:col-span-2 md:h-3/4 object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
         <Image
@@ -86,6 +96,7 @@ export default function BentoGridGallery() {
           alt="bento-1"
           width={2160}
           height={1080}
+          priority
           className="w-full col-span-2 h-full md:h-3/4 object-cover aspect-auto rounded-xl hover:scale-105 hover:rotate-1 ease-in-out duration-500"
         />
       </div>

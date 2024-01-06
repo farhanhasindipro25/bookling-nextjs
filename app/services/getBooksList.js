@@ -1,6 +1,6 @@
 const getBooksList = async () => {
   const response = await fetch(
-    "https://df0bb499a0aa4c60a20bd81e6d1471a6.api.mockbin.io/"
+    "https://41e043d9c98f4dfd98822634f8d9f4ba.api.mockbin.io/"
   );
 
   if (!response.ok) {
