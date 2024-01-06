@@ -1,12 +1,61 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 export default function LargeScreenHero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+  };
+
+  const leftPartVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const middlePartVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const rightPartVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const [refLeftPart, inViewLeftPart] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
+  const [refMiddlePart, inViewMiddlePart] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
+  const [refRightPart, inViewRightPart] = useInView({
+    triggerOnce: false,
+    threshold: 0.5,
+  });
+
   return (
-    <div className="bg-gray-50">
-      <div className="grid grid-cols-3 gap-4">
-        <div className="w-full h-full flex flex-col justify-evenly">
+    <motion.div
+      className="bg-gray-50"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
+      <motion.div className="grid grid-cols-3 gap-4">
+        <motion.div
+          className="w-full h-full flex flex-col justify-evenly"
+          variants={leftPartVariants}
+          ref={refLeftPart}
+          animate={inViewLeftPart ? "visible" : "hidden"}
+          initial="hidden"
+        >
           <h2 className="text-5xl font-semibold text-blue-950">
             BOUNDLESS WORLDS
             <span className="text-4xl ml-4 text-blue-700">
@@ -45,8 +94,14 @@ export default function LargeScreenHero() {
             loading="lazy"
             className="w-full h-28 rounded-xl object-cover object-center"
           />
-        </div>
-        <div className="w-full h-full">
+        </motion.div>
+        <motion.div
+          className="w-full h-full"
+          variants={middlePartVariants}
+          ref={refMiddlePart}
+          animate={inViewMiddlePart ? "visible" : "hidden"}
+          initial="hidden"
+        >
           <Image
             src="/assets/gallery/img7.jpg"
             alt="main-banner"
@@ -54,8 +109,14 @@ export default function LargeScreenHero() {
             width={3000}
             className="object-cover object-center aspect-auto rounded-xl"
           />
-        </div>
-        <div className="w-full flex flex-col justify-between h-full">
+        </motion.div>
+        <motion.div
+          className="w-full flex flex-col justify-between h-full"
+          variants={rightPartVariants}
+          ref={refRightPart}
+          animate={inViewRightPart ? "visible" : "hidden"}
+          initial="hidden"
+        >
           <Image
             src="/assets/gallery/banner2.jpg"
             alt="main-banner"
@@ -79,8 +140,8 @@ export default function LargeScreenHero() {
               <ArrowUpRightIcon className="w-16 h-16 bg-blue-700 p-4 rounded-full text-white" />
             </Link>
           </div>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }

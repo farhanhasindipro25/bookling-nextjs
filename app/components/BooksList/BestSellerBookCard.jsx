@@ -15,7 +15,7 @@ const cardVariants = {
 
 export default function BestSellerBookCard({ book }) {
   const [ref, inView] = useInView({
-    triggerOnce: true,
+    triggerOnce: false,
   });
 
   return (

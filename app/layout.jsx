@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
         <TanstackProvider>
           <main className="bg-gray-50">
             <BaseNavbar />
-            <div className="max-w-7xl mx-auto px-6 py-28 min-h-screen">
+            <div className="max-w-7xl mx-auto px-6 lg:py-28 min-h-screen">
               {children}
             </div>
           </main>

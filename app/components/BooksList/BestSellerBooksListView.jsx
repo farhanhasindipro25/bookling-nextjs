@@ -12,7 +12,7 @@ export default function BestSellerBooksListView() {
   if (isLoading) return "Loading...";
 
   return (
-    <div className="space-y-4 md:space-y-12">
+    <div className="pt-14 md:pt-0 space-y-4 md:space-y-12">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-blue-950">
         BEST SELLERS
         <span className="text-xl md:text-3xl lg:text-4xl ml-4 text-blue-700">

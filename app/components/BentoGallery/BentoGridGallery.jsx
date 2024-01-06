@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BentoGridGallery() {
   return (
-    <div className="space-y-4 md:space-y-12 pt-40">
+    <div className="space-y-4 md:space-y-12 lg:pt-40">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-blue-950">
         LITERARY TREASURES
         <span className="text-xl md:text-3xl lg:text-4xl ml-4 text-blue-700">
