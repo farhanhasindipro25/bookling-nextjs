@@ -5,7 +5,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 export default function LargeScreenHero() {
   return (
     <div className="pt-20 pb-44 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-4">
+      <div className="grid grid-cols-3 gap-4">
         <div className="w-full h-full flex flex-col justify-evenly">
           <h2 className="text-5xl font-semibold text-blue-950">
             BOUNDLESS WORLDS

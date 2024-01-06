@@ -5,7 +5,7 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 export default function SmallScreenHero() {
   return (
     <div className="pt-6 min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div className="w-full h-full flex flex-col justify-center space-y-6">
           <h2 className="text-2xl sm:text-3xl font-semibold text-blue-950">
             BOUNDLESS WORLDS

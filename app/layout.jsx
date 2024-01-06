@@ -1,5 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import TanstackProvider from "@/components/providers/TanstackProvider";
+import BaseNavbar from "./components/BaseNavbar";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -12,7 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <main className="bg-gray-50">{children}</main>
+        <TanstackProvider>
+          <main className="bg-gray-50">
+            <BaseNavbar />
+            <div className="max-w-7xl mx-auto px-6">{children}</div>
+          </main>
+        </TanstackProvider>
       </body>
     </html>
   );
