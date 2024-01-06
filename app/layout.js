@@ -12,7 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <main>{children}</main>
+        <main className="bg-gray-50">{children}</main>
       </body>
     </html>
   );

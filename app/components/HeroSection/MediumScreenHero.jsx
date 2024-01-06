@@ -4,12 +4,12 @@ import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
 export default function MediumScreenHero() {
   return (
-    <div className="pt-6 min-h-screen bg-gray-50">
+    <div className="pt-32 min-h-screen bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-4">
         <div className="w-full h-full flex flex-col justify-evenly">
-          <h2 className="text-2xl font-semibold text-blue-950">
+          <h2 className="text-4xl font-semibold text-blue-950">
             BOUNDLESS WORLDS
-            <span className="text-xl ml-2 text-blue-700">
+            <span className="text-3xl ml-2 text-blue-700">
               ONE UNIFIED PLATFORM
             </span>
           </h2>

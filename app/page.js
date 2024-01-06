@@ -1,4 +1,5 @@
 import BaseNavbar from "./components/BaseNavbar";
+import BentoGridGallery from "./components/BentoGridGallery";
 import HeroSection from "./components/HeroSection/HeroSection";
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
     <div>
       <BaseNavbar />
       <HeroSection />
+      <BentoGridGallery />
     </div>
   );
 }
