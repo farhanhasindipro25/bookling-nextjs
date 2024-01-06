@@ -1,9 +1,31 @@
 import { getDateInDMYFormat } from "@/app/utils/UtilsKit";
 import Badge from "@/components/providers/Badge";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+const cardVariants = {
+  hidden: { opacity: 0, x: -15 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.2, ease: "easeInOut" },
+  },
+};
+
 export default function BestSellerBookCard({ book }) {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+
   return (
-    <div className="w-full rounded-lg bg-white border border-gray-300 shadow-md relative">
+    <motion.div
+      ref={ref}
+      className="w-full rounded-lg bg-white border border-gray-300 shadow-md relative"
+      variants={cardVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+    >
       <Image
         src={book.bookImg || "/assets/img-placeholder.jpg"}
         alt={book.bookName}
@@ -38,6 +60,6 @@ export default function BestSellerBookCard({ book }) {
           </h2>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
