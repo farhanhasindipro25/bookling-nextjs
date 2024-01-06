@@ -2,16 +2,18 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
 
-export default function HeroSection() {
+export default function MediumScreenHero() {
   return (
-    <div className="pt-12 min-h-screen bg-gray-50">
-      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div className="w-full h-full flex flex-col justify-between">
-          <h2 className="text-5xl font-semibold text-blue-950">
+    <div className="pt-6 min-h-screen bg-gray-50">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-4">
+        <div className="w-full h-full flex flex-col justify-evenly">
+          <h2 className="text-2xl font-semibold text-blue-950">
             BOUNDLESS WORLDS
-            <span className="ml-4 text-blue-700">ONE UNIFIED PLATFORM</span>
+            <span className="text-xl ml-2 text-blue-700">
+              ONE UNIFIED PLATFORM
+            </span>
           </h2>
-          <p className="text-blue-950 text-base font-medium">
+          <p className="text-blue-950 text-sm font-medium">
             From classics to contemporary tales, find your literary haven here.
             Books that resonate, stories that endure.
           </p>
@@ -23,7 +25,7 @@ export default function HeroSection() {
                 width={500}
                 height={500}
                 loading="lazy"
-                className="w-16 h-16 border-2 border-blue-600 rounded-full"
+                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-blue-600 rounded-full"
               />
               <div>
                 <p className="italic text-sm font-semibold text-blue-950">
@@ -50,30 +52,31 @@ export default function HeroSection() {
             alt="main-banner"
             height={3000}
             width={3000}
-            className="object-cover object-center aspect-auto rounded-xl"
+            className="object-cover object-center aspect-auto h-full rounded-xl"
           />
         </div>
-        <div className="w-full space-y-4 h-full">
+        <div className="w-full flex flex-col gap-4 h-full">
           <Image
             src="/assets/gallery/banner2.jpg"
             alt="main-banner"
             height={3000}
             width={3000}
-            className="object-cover object-center aspect-auto rounded-xl"
+            className="object-cover object-center aspect-auto h-9/11 rounded-xl"
           />
           <div className="flex items-center gap-4">
             <div>
-              <h2 className="text-2xl font-semibold text-blue-700">
+              <h2 className="text-lg font-semibold text-blue-950">
                 Explore Books
               </h2>
               <p className="font-medium text-gray-500">
                 Find books of different authors, view details, and many more
               </p>
             </div>
-            <Link href="/login">
-              <button className="hover:scale-75 hover:rotate-45 ease-in-out duration-300 cursor-pointer">
-                <ArrowUpRightIcon className="w-16 h-16 bg-blue-700 p-4 rounded-full text-white" />
-              </button>
+            <Link
+              href="/login"
+              className="hover:scale-75 hover:rotate-45 ease-in-out duration-300 cursor-pointer"
+            >
+              <ArrowUpRightIcon className="w-16 h-16 bg-blue-700 p-4 rounded-full text-white" />
             </Link>
           </div>
         </div>
