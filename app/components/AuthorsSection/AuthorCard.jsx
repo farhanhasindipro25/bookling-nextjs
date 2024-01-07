@@ -1,4 +1,3 @@
-import { getDateInDMYFormat } from "@/utils/UtilsKit";
 import { CakeIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -21,7 +20,7 @@ export default function AuthorCard({ author }) {
   return (
     <motion.div
       ref={ref}
-      className="w-full rounded-lg bg-white border border-gray-300 shadow-md relative"
+      className="w-full rounded-lg bg-white border border-gray-300 shadow-md"
       variants={cardVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

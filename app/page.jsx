@@ -1,6 +1,7 @@
 import AuthorsList from "./components/AuthorsSection/AuthorsList";
 import BentoGridGallery from "./components/BentoGallery/BentoGridGallery";
 import BestSellerBooksListView from "./components/BooksList/BestSellerBooksListView";
+import Footer from "./components/Footer";
 import HeroSection from "./components/HeroSection/HeroSection";
 
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
       <AuthorsList />
       <BestSellerBooksListView />
       <BentoGridGallery />
+      <Footer />
     </div>
   );
 }
