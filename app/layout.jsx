@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
             <main className="bg-gray-50">
               <BaseNavbar />
               <Toaster />
-              <div className="max-w-7xl mx-auto px-6 lg:py-28 min-h-screen">
+              <div className="max-w-7xl mx-auto px-6 py-10 lg:py-20 min-h-screen">
                 {children}
               </div>
             </main>
