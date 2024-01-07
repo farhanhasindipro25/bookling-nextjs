@@ -1,5 +1,4 @@
 "use client";
-import loginUser from "@/services/loginUser";
 import { createContext, useContext, useState } from "react";
 
 const AuthContext = createContext();

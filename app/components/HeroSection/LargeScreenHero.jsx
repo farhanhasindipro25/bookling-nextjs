@@ -56,7 +56,7 @@ export default function LargeScreenHero() {
           animate={inViewLeftPart ? "visible" : "hidden"}
           initial="hidden"
         >
-          <h2 className="text-5xl font-semibold text-blue-950">
+          <h2 className="text-5xl font-semibold text-blue-950 hover:scale-105 hover:-rotate-3 ease-in-out duration-500">
             BOUNDLESS WORLDS
             <span className="text-4xl ml-4 text-blue-700">
               ONE UNIFIED PLATFORM
@@ -74,7 +74,7 @@ export default function LargeScreenHero() {
                 width={500}
                 height={500}
                 loading="lazy"
-                className="w-12 h-12 lg:w-16 lg:h-16 border-2 border-blue-600 rounded-full"
+                className="w-12 h-12 lg:w-16 lg:h-16 border-2 hover:scale-105 hover:rotate-3 ease-in-out duration-500 border-blue-600 rounded-full"
               />
               <div>
                 <p className="italic text-sm font-semibold text-blue-950">
@@ -88,11 +88,11 @@ export default function LargeScreenHero() {
           </span>
           <Image
             src="/assets/gallery/img5.jpg"
-            alt="Steve-Jobs"
+            alt="bottom-left-img"
             width={500}
             height={500}
             loading="lazy"
-            className="w-full h-28 rounded-xl object-cover object-center"
+            className="w-full h-28 rounded-xl object-cover object-center hover:scale-105 ease-in-out duration-500"
           />
         </motion.div>
         <motion.div
@@ -107,7 +107,7 @@ export default function LargeScreenHero() {
             alt="main-banner"
             height={3000}
             width={3000}
-            className="object-cover object-center aspect-auto rounded-xl"
+            className="object-cover object-center aspect-auto rounded-xl hover:scale-90 ease-in-out duration-500"
           />
         </motion.div>
         <motion.div
@@ -122,11 +122,11 @@ export default function LargeScreenHero() {
             alt="main-banner"
             height={3000}
             width={3000}
-            className="object-cover object-center aspect-auto rounded-xl"
+            className="object-cover object-center aspect-auto rounded-xl hover:scale-110 ease-in-out duration-500"
           />
           <div className="flex items-center gap-4">
             <div>
-              <h2 className="text-2xl font-semibold text-blue-950">
+              <h2 className="text-2xl font-semibold text-blue-950 hover:scale-105 ease-in-out duration-500">
                 Explore Books
               </h2>
               <p className="font-medium text-gray-500">

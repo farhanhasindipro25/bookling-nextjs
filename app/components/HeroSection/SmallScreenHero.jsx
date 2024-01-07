@@ -1,12 +1,42 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRightIcon } from "@heroicons/react/24/outline";
+import { motion } from "framer-motion";
 
 export default function SmallScreenHero() {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { opacity: 1, transition: { duration: 1 } },
+  };
+
+  const leftPartVariants = {
+    hidden: { x: -50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const rightPartVariants = {
+    hidden: { y: -50, opacity: 0 },
+    visible: { y: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
+  const bottomPartVariants = {
+    hidden: { x: 50, opacity: 0 },
+    visible: { x: 0, opacity: 1, transition: { duration: 1, delay: 0.5 } },
+  };
+
   return (
-    <div className="pt-6 min-h-screen bg-gray-50">
+    <motion.div
+      className="pt-6 min-h-screen bg-gray-50"
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div className="w-full h-full flex flex-col justify-center space-y-6">
+        <motion.div
+          className="w-full h-full flex flex-col justify-center space-y-6"
+          variants={leftPartVariants}
+        >
           <h2 className="text-2xl sm:text-3xl font-semibold text-blue-950">
             BOUNDLESS WORLDS
             <span className="text-xl sm:text-2xl ml-2 text-blue-700">
@@ -61,8 +91,8 @@ export default function SmallScreenHero() {
               <ArrowUpRightIcon className="w-16 h-16 bg-blue-700 p-4 rounded-full text-white" />
             </Link>
           </div>
-        </div>
-        <div className="w-full h-full">
+        </motion.div>
+        <motion.div className="w-full h-full" variants={rightPartVariants}>
           <Image
             src="/assets/gallery/img7.jpg"
             alt="main-banner"
@@ -70,9 +100,12 @@ export default function SmallScreenHero() {
             width={3000}
             className="object-cover object-center aspect-auto h-full rounded-xl hidden sm:block"
           />
-        </div>
+        </motion.div>
       </div>
-      <div className="w-full pt-4 pb-16 flex flex-col gap-4 h-full">
+      <motion.div
+        className="w-full pt-4 pb-16 flex flex-col gap-4 h-full"
+        variants={bottomPartVariants}
+      >
         <Image
           src="/assets/gallery/banner2.jpg"
           alt="main-banner"
@@ -80,7 +113,7 @@ export default function SmallScreenHero() {
           width={3000}
           className="object-cover object-center aspect-auto h-9/11 rounded-xl"
         />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }

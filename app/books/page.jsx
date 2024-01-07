@@ -14,7 +14,11 @@ export default function BooksPage() {
     queryFn: () => getGlobalBooksList(),
   });
 
-  if (isLoading) return <BookCardSkeleton />;
+  if (isLoading) {
+    setTimeout(() => {
+      return <BookCardSkeleton />;
+    }, 5000);
+  }
   if (isError) return <BookCardError />;
 
   return (

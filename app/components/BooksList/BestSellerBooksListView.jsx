@@ -11,7 +11,11 @@ export default function BestSellerBooksListView() {
     queryFn: () => getBooksList(),
   });
 
-  if (isLoading) return <BestSellerCardSkeleton />;
+  if (isLoading) {
+    setTimeout(() => {
+      return <BestSellerCardSkeleton />;
+    }, 5000);
+  }
   if (isError) return <BestSellerBookError />;
 
   return (
