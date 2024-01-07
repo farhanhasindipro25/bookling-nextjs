@@ -2,6 +2,8 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import TanstackProvider from "@/components/providers/TanstackProvider";
 import BaseNavbar from "./components/BaseNavbar";
+import AuthProvider from "@/context-providers/AuthProvider";
+import { Toaster } from "react-hot-toast";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -14,14 +16,17 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={montserrat.className}>
-        <TanstackProvider>
-          <main className="bg-gray-50">
-            <BaseNavbar />
-            <div className="max-w-7xl mx-auto px-6 lg:py-28 min-h-screen">
-              {children}
-            </div>
-          </main>
-        </TanstackProvider>
+        <AuthProvider>
+          <TanstackProvider>
+            <main className="bg-gray-50">
+              <BaseNavbar />
+              <Toaster />
+              <div className="max-w-7xl mx-auto px-6 lg:py-28 min-h-screen">
+                {children}
+              </div>
+            </main>
+          </TanstackProvider>
+        </AuthProvider>
       </body>
     </html>
   );

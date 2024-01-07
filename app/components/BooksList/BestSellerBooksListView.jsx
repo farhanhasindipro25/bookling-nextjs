@@ -1,5 +1,5 @@
 "use client";
-import getBooksList from "@/app/services/getBooksList";
+import getBooksList from "@/services/getBooksList";
 import { useQuery } from "@tanstack/react-query";
 import BestSellerBookCard from "./BestSellerBookCard";
 import BestSellerCardSkeleton from "./skeleton/BestSellerCardSkeleton";

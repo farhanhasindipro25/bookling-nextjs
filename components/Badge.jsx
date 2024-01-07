@@ -1,4 +1,4 @@
-import cn from "@/app/utils/UtilsKit";
+import cn from "@/utils/UtilsKit";
 import { cva } from "class-variance-authority";
 
 const DEFAULT_BADGE_STYLES =

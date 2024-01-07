@@ -1,4 +1,4 @@
-import { getDateInDMYFormat } from "@/app/utils/UtilsKit";
+import { getDateInDMYFormat } from "@/utils/UtilsKit";
 import Badge from "@/components/Badge";
 import Image from "next/image";
 import { motion } from "framer-motion";

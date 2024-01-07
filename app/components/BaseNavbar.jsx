@@ -13,6 +13,7 @@ export default function BaseNavbar() {
               height={500}
               alt="logo"
               className="w-10 h-full"
+              priority
             />
             <p className="font-semibold text-blue-950">BOOKLING</p>
           </Link>

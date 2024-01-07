@@ -1,4 +1,4 @@
-import cn from "@/app/utils/UtilsKit";
+import cn from "@/utils/UtilsKit";
 
 const INPUT_LABEL_STYLES =
   "appearance-none block text-base font-semibold text-neutral-700";
