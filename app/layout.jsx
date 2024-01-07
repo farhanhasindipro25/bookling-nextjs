@@ -1,7 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import TanstackProvider from "@/components/providers/TanstackProvider";
-import BaseNavbar from "./components/BaseNavbar";
+import BaseNavbar from "./components/BaseNavbar/BaseNavbar";
 import AuthProvider from "@/context-providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
 
