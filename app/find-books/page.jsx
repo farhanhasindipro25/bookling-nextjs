@@ -23,6 +23,8 @@ export default function FindBooksPage() {
         data={data}
         isFilterActive={isFilterActive}
         setIsFilterActive={setIsFilterActive}
+        isLoading={isLoading}
+        isError={isError}
       />
       {isFilterActive === false ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
