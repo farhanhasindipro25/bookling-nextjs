@@ -47,26 +47,31 @@ export default function BookCard({ book }) {
             {getDateInDMYFormat(book.publicationDate)}
           </p>
         </div>
-        <div className="flex pt-2 items-center justify-start gap-2">
-          <Image
-            src={book.authorAvatar || "/assets/img-placeholder.jpg"}
-            alt={book.bookName}
-            width={100}
-            height={100}
-            priority
-            className="w-12 h-12 rounded-full object-cover aspect-auto object-top"
-          />
-          <div>
-            <h2 className="font-medium text-blue-950 text-sm">
-              {book.authorName}
-            </h2>
-            <div className="flex items-end gap-2">
-              <CakeIcon className="w-6 h-6 text-blue-700 rounded-md" />
-              <p className="text-sm font-medium text-gray-700">
-                {" "}
-                {getDateInDMYFormat(book.authorBirthYear)}
+        <div className="space-y-4">
+          <div className="flex pt-2 items-center justify-start gap-2">
+            <Image
+              src={book.authorAvatar || "/assets/img-placeholder.jpg"}
+              alt={book.bookName}
+              width={100}
+              height={100}
+              priority
+              className="w-12 h-12 rounded-full object-cover aspect-auto object-top"
+            />
+            <div>
+              <h2 className="font-medium text-blue-950 text-sm">
+                {book.authorName}
+              </h2>
+              <p className="font-semibold text-gray-500 text-sm">
+                {book.authorGender}
               </p>
             </div>
+          </div>
+          <div className="flex items-end justify-end gap-2">
+            <CakeIcon className="w-6 h-6 text-blue-700 rounded-md" />
+            <p className="text-sm font-medium text-gray-700">
+              {" "}
+              {getDateInDMYFormat(book.authorBirthYear)}
+            </p>
           </div>
         </div>
       </div>

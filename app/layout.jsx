@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
           <TanstackProvider>
             <main className="bg-gray-50">
               <BaseNavbar />
-              <Toaster />
+              <Toaster position="bottom-right" />
               <div className="max-w-7xl mx-auto px-6 py-10 lg:py-20 min-h-screen">
                 {children}
               </div>
