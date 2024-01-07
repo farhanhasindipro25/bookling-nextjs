@@ -49,6 +49,13 @@ export default function FilterPanel({
         </div>
         <div className="w-1/2"></div>
       </div>
+      <div>
+        {selectedSortOption === "publicationDate" ? (
+          <p>Results Sorted by Publication Date</p>
+        ) : (
+          <p>Results Sorted by Author Birthdate</p>
+        )}
+      </div>
       {isFilterActive === true ? (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
           {filteredData?.map((book) => (
