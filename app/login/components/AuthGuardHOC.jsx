@@ -1,8 +1,8 @@
+"use client";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
-import { useAuthContext } from "../contexts/AuthContext";
-import loginUser from "../services/loginUser";
-
+import { useRouter } from "next/navigation";
+import loginUser from "@/services/loginUser";
+import { useAuthContext } from "@/context-providers/AuthProvider";
 const AuthGuardHOC = (props) => {
   const router = useRouter();
   const [state, setState] = useState({
