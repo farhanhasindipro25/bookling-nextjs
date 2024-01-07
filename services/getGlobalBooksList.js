@@ -1,7 +1,7 @@
 "use server";
-const getBooksList = async () => {
+const getGlobalBooksList = async () => {
   const response = await fetch(
-    "https://41e043d9c98f4dfd98822634f8d9f4ba.api.mockbin.io/"
+    "https://809d943e48f84a3792f00683a8783014.api.mockbin.io/"
   );
 
   if (!response.ok) {
@@ -11,4 +11,4 @@ const getBooksList = async () => {
   return response.json();
 };
 
-export default getBooksList;
+export default getGlobalBooksList;
