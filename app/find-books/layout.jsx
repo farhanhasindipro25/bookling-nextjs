@@ -1,5 +1,3 @@
-import FilterPanel from "./components/FilterPanel";
-
 export default function FindBooksLayout({ children }) {
   return (
     <div className="space-y-6 lg:space-y-10">
@@ -10,10 +8,7 @@ export default function FindBooksLayout({ children }) {
         </span>
       </h2>
 
-      <div className="space-y-4">
-        <FilterPanel />
-        <>{children}</>
-      </div>
+      <div>{children}</div>
     </div>
   );
 }
