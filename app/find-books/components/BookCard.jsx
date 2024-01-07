@@ -3,6 +3,7 @@ import Badge from "@/components/Badge";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { CakeIcon } from "@heroicons/react/24/outline";
 
 const cardVariants = {
   hidden: { opacity: 0, x: -15 },
@@ -53,11 +54,20 @@ export default function BookCard({ book }) {
             width={100}
             height={100}
             priority
-            className="w-8 h-8 rounded-full object-cover aspect-auto object-top"
+            className="w-12 h-12 rounded-full object-cover aspect-auto object-top"
           />
-          <h2 className="font-medium text-blue-950 text-sm">
-            {book.authorName}
-          </h2>
+          <div>
+            <h2 className="font-medium text-blue-950 text-sm">
+              {book.authorName}
+            </h2>
+            <div className="flex items-end gap-2">
+              <CakeIcon className="w-6 h-6 text-blue-700 rounded-md" />
+              <p className="text-sm font-medium text-gray-700">
+                {" "}
+                {getDateInDMYFormat(book.authorBirthYear)}
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </motion.div>
