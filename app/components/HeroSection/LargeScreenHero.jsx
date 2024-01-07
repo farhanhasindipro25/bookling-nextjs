@@ -43,7 +43,7 @@ export default function LargeScreenHero() {
 
   return (
     <motion.div
-      className="bg-gray-50"
+      className="bg-gray-50 py-10"
       variants={containerVariants}
       initial="hidden"
       animate="visible"

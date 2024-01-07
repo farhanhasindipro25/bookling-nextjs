@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <div>
       <HeroSection />
-      <BentoGridGallery />
       <BestSellerBooksListView />
+      <BentoGridGallery />
     </div>
   );
 }
