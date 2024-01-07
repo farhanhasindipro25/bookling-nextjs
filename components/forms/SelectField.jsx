@@ -10,13 +10,10 @@ export default function SelectField(props) {
     name,
     id,
     defaultValue,
-    className,
     options,
     onChange,
     placeholder,
-    onClick,
     value,
-    errors,
     isMulti = false,
     isClearable = false,
   } = props;

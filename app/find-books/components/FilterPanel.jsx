@@ -194,8 +194,8 @@ export default function FilterPanel({
   return (
     <div className="space-y-6">
       <div className={cn(isFilterActive === true ? "space-y-6" : "")}>
-        <div className="flex items-center gap-4 w-full">
-          <div className="w-1/3">
+        <div className="flex flex-col md:flex-row items-center gap-4 w-full">
+          <div className="w-full md:w-1/3">
             <SelectField
               label="Publication Date"
               name="publication_date"
@@ -205,7 +205,7 @@ export default function FilterPanel({
               defaultValue={selectedSortOption}
             />
           </div>
-          <div className="w-1/3">
+          <div className="w-full md:w-1/3">
             <SelectField
               label="Author Gender"
               name="author_gender"
@@ -215,7 +215,7 @@ export default function FilterPanel({
               defaultValue={selectedGenderOption}
             />
           </div>
-          <div className="w-1/3">
+          <div className="w-full md:w-1/3">
             <SelectField
               label="Book Category"
               name="book_category"
