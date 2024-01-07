@@ -2,6 +2,7 @@
 import getBooksList from "@/app/services/getBooksList";
 import { useQuery } from "@tanstack/react-query";
 import BestSellerBookCard from "./BestSellerBookCard";
+import BestSellerCardSkeleton from "./BestSellerCardSkeleton";
 
 export default function BestSellerBooksListView() {
   const { data, isLoading, isError } = useQuery({
@@ -9,7 +10,7 @@ export default function BestSellerBooksListView() {
     queryFn: () => getBooksList(),
   });
 
-  if (isLoading) return "Loading...";
+  if (isLoading) return <BestSellerCardSkeleton />;
 
   return (
     <div className="pt-14 md:pt-0 space-y-4 md:space-y-12">

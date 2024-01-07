@@ -9,6 +9,7 @@ const SCIENCE_FICTION_BADGE_STYLES = "bg-sky-200 text-sky-700";
 const FICTION_BADGE_STYLES = "bg-orange-100 text-gray-700";
 const BUSINESS_BADGE_STYLES = "bg-green-200 text-green-700";
 const THRILLER_BADGE_STYLES = "bg-amber-200 text-amber-700";
+const SKELETON_BADGE_STYLES = "bg-gray-300 w-16 h-4";
 
 const BADGE_VARIANTS = cva(DEFAULT_BADGE_STYLES, {
   variants: {
@@ -19,6 +20,7 @@ const BADGE_VARIANTS = cva(DEFAULT_BADGE_STYLES, {
       Fiction: FICTION_BADGE_STYLES,
       "Science Fiction": SCIENCE_FICTION_BADGE_STYLES,
       Thriller: THRILLER_BADGE_STYLES,
+      Skeleton: SKELETON_BADGE_STYLES,
     },
   },
   defaultVariants: {
