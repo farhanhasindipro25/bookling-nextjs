@@ -122,6 +122,7 @@ export default function LargeScreenHero() {
             alt="main-banner"
             height={3000}
             width={3000}
+            priority
             className="object-cover object-center aspect-auto rounded-xl hover:scale-110 ease-in-out duration-500"
           />
           <div className="flex items-center gap-4">

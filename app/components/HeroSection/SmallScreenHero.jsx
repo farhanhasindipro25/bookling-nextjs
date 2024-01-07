@@ -111,6 +111,7 @@ export default function SmallScreenHero() {
           alt="main-banner"
           height={3000}
           width={3000}
+          priority
           className="object-cover object-center aspect-auto h-9/11 rounded-xl"
         />
       </motion.div>

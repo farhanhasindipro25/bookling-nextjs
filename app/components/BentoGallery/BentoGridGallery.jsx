@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const images = [
   {
@@ -41,12 +41,21 @@ const images = [
   {
     src: "/assets/gallery/img17.jpg",
   },
+  {
+    src: "/assets/gallery/img18.jpg",
+  },
+  {
+    src: "/assets/gallery/img19.jpg",
+  },
+  {
+    src: "/assets/gallery/img20.jpg",
+  },
 ];
 
 export default function BentoGridGallery() {
   const controls = useAnimation();
   const [ref, inView] = useInView({
-    triggerOnce: false,
+    triggerOnce: true,
   });
 
   const fadeInVariants = {
@@ -55,7 +64,7 @@ export default function BentoGridGallery() {
   };
 
   const fadeInTransition = {
-    duration: 0.5,
+    duration: 0.8,
     ease: "easeInOut",
   };
 
@@ -66,7 +75,7 @@ export default function BentoGridGallery() {
   }, [controls, inView]);
 
   return (
-    <div className="space-y-4 md:space-y-12 lg:pt-24 py-20">
+    <div className="space-y-4 md:space-y-12 py-20 lg:py-24">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-blue-950">
         LITERARY TREASURES
         <span className="text-xl md:text-3xl lg:text-4xl ml-4 text-blue-700">
@@ -74,29 +83,8 @@ export default function BentoGridGallery() {
         </span>
       </h2>
 
-      <div className="grid-cols-5 gap-4 hidden md:grid">
-        {images?.slice(0, 10).map((image, index) => (
-          <motion.div
-            key={index}
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={fadeInVariants}
-            transition={fadeInTransition}
-          >
-            <Image
-              src={image.src}
-              alt={`bento-${index + 1}`}
-              width={2160}
-              height={1080}
-              priority
-              className="w-full h-full object-cover aspect-auto rounded-lg"
-            />
-          </motion.div>
-        ))}
-      </div>
-      <div className="grid grid-cols-3 gap-4  md:hidden">
-        {images.map((image, index) => (
+      <div className="grid-cols-3 md:grid-cols-5 gap-4 grid">
+        {images?.map((image, index) => (
           <motion.div
             key={index}
             ref={ref}
