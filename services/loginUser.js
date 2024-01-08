@@ -1,4 +1,4 @@
-
+"use server";
 const loginUser = async (username, password) => {
   const response = await fetch(
     "https://assignment.ongshak.com/rest-auth/login/",
