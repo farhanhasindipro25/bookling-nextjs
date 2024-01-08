@@ -4,6 +4,7 @@ import TanstackProvider from "@/components/providers/TanstackProvider";
 import BaseNavbar from "./components/BaseNavbar/BaseNavbar";
 import AuthProvider from "@/context-providers/AuthProvider";
 import { Toaster } from "react-hot-toast";
+import Footer from "./components/Footer";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
               <div className="max-w-7xl mx-auto px-6 py-10 lg:py-20 min-h-screen">
                 {children}
               </div>
+              <Footer />
             </main>
           </TanstackProvider>
         </AuthProvider>
