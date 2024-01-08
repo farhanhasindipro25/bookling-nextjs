@@ -2,7 +2,7 @@
 import Select from "react-select";
 
 const SELECT_LABEL_STYLES =
-  "appearance-none block text-base font-semibold text-neutral-700";
+  "appearance-none block text-base font-semibold text-gray-700";
 
 export default function SelectField(props) {
   const {
@@ -21,9 +21,9 @@ export default function SelectField(props) {
   const customStyles = {
     control: (provided, state) => ({
       ...provided,
-      borderColor: state.isFocused ? "rgba(5, 150, 105)" : provided.borderColor,
+      borderColor: state.isFocused ? "rgb(37, 99, 235)" : provided.borderColor,
       boxShadow: state.isFocused
-        ? "0 0 0 2px rgba(25, 200, 105)"
+        ? "0 0 0 2px rgba(37, 99, 235)"
         : provided.boxShadow,
       border: state.isFocused ? "none" : provided.border,
       paddingTop: "3px",
@@ -33,14 +33,14 @@ export default function SelectField(props) {
       ...provided,
       backgroundColor:
         (state.isFocused || state.isSelected) && !state.isMulti
-          ? "rgb(5, 150, 105)"
+          ? "rgb(37, 99, 235)"
           : provided.backgroundColor,
       color:
         (state.isFocused || state.isSelected) && !state.isMulti
           ? "white"
           : "rgb(15, 23, 42)",
       "&:hover": {
-        backgroundColor: "rgb(4, 120, 87)",
+        backgroundColor: "rgb(37, 99, 235)",
         color: "white",
         cursor: "pointer",
       },

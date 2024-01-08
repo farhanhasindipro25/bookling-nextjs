@@ -1,7 +1,6 @@
-  // login
-  // skeleton
-  // new endpoint for authed books list
-  // filters
-  // animation on them
-  // documentation
-  // authors in landing page. + skeletons + more sections
+# BOOKLING
+
+### SETUP INSTRUCTIONS
+
+1. Clone the Github repository: https://github.com/farhanhasindipro25/bookling-nextjs
+2.
