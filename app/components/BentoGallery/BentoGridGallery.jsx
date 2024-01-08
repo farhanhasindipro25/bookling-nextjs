@@ -1,8 +1,4 @@
-"use client";
-import Image from "next/image";
-import { motion, useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
-import { useEffect, useRef } from "react";
+import ImageCard from "./ImageCard";
 
 const images = [
   {
@@ -53,27 +49,6 @@ const images = [
 ];
 
 export default function BentoGridGallery() {
-  const controls = useAnimation();
-  const [ref, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  const fadeInVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-  };
-
-  const fadeInTransition = {
-    duration: 0.8,
-    ease: "easeInOut",
-  };
-
-  useEffect(() => {
-    if (inView) {
-      controls.start("visible");
-    }
-  }, [controls, inView]);
-
   return (
     <div className="space-y-4 md:space-y-12 py-20 lg:py-24">
       <h2 className="text-2xl md:text-4xl lg:text-5xl font-semibold text-blue-950">
@@ -85,23 +60,7 @@ export default function BentoGridGallery() {
 
       <div className="grid-cols-3 md:grid-cols-5 gap-4 grid">
         {images?.map((image, index) => (
-          <motion.div
-            key={index}
-            ref={ref}
-            initial="hidden"
-            animate={controls}
-            variants={fadeInVariants}
-            transition={fadeInTransition}
-          >
-            <Image
-              src={image.src}
-              alt={`bento-${index + 1}`}
-              width={2160}
-              height={1080}
-              priority
-              className="w-full h-full object-cover aspect-auto rounded-lg"
-            />
-          </motion.div>
+          <ImageCard key={index + 1} image={image} index={index} />
         ))}
       </div>
     </div>
