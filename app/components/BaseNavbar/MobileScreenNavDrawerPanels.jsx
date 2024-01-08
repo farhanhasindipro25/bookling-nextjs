@@ -1,3 +1,4 @@
+import Button from "@/components/forms/Button";
 import cn from "@/utils/UtilsKit";
 import { HomeIcon, BookOpenIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -59,9 +60,7 @@ export default function MobileScreenNavDrawerPanel({ me, setOpen }) {
       </div>
       <div className="flex justify-end pt-4">
         <Link href="/login" onClick={() => setOpen(false)}>
-          <button className="bg-white border border-blue-600 rounded-md text-sm font-semibold text-blue-600 px-4 py-3 hover:bg-blue-50">
-            LOGIN
-          </button>
+          <Button variant="secondary">LOGIN</Button>
         </Link>
       </div>
     </nav>

@@ -7,6 +7,7 @@ import { Bars3Icon } from "@heroicons/react/24/outline";
 import { useState } from "react";
 import RightSideDrawer from "@/components/RightSideDrawer";
 import MobileScreenNavDrawerPanel from "./MobileScreenNavDrawerPanels";
+import Button from "@/components/forms/Button";
 
 const navOptions = [
   { name: "Home", href: "/" },
@@ -55,10 +56,8 @@ export default function BaseNavbar() {
               ))}
             </div>
           </div>
-          <Link href="/login">
-            <button className="bg-white border border-blue-600 rounded-md text-sm font-semibold text-blue-600 px-4 py-3 hover:bg-blue-50 lg:block hidden">
-              LOGIN
-            </button>
+          <Link href="/login" className="hidden lg:block">
+            <Button variant="secondary">LOGIN</Button>
           </Link>
           <Bars3Icon
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}

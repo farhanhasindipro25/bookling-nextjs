@@ -8,6 +8,7 @@ import toast from "react-hot-toast";
 import { useAuthContext } from "@/context-providers/AuthProvider";
 import loginUser from "@/services/loginUser";
 import { InformationCircleIcon } from "@heroicons/react/24/outline";
+import Button from "@/components/forms/Button";
 
 const yupSchema = object({
   email: string().email("Email must be valid").required("Email is required!"),
@@ -93,12 +94,13 @@ export default function LoginPage() {
               )}
             </div>
             <div className="flex w-full">
-              <button
+              <Button
                 type="submit"
-                className="bg-blue-600 text-white p-4 w-full rounded-md"
+                variant="primary"
+                className="w-full justify-center"
               >
                 {formik.isSubmitting ? "Logging in..." : "Login"}
-              </button>
+              </Button>
             </div>
           </form>
         </div>

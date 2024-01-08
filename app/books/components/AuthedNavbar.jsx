@@ -57,9 +57,7 @@ export default function AuthedNavbar() {
             </div>
           </div>
           <Link href="/logout">
-            <button className="bg-white border border-blue-600 rounded-md text-sm font-semibold text-blue-600 px-4 py-3 hover:bg-blue-50 lg:block hidden">
-              LOGOUT
-            </button>
+            <Button variant="secondary">LOGOUT</Button>
           </Link>
           <Bars3Icon
             onClick={() => setIsDrawerOpen(!isDrawerOpen)}
