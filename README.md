@@ -49,6 +49,40 @@ or
 
 ### 2. CODE STRUCTURE
 
+- This folder structure is based on NextJS v14's app router.
+- In the first layer
+    - The app directory containes all pages (routes) of the applications.
+    - The components folder in this directory contains all the shared, generic, common, reusable components.
+        - Button
+        - RightSideDrawer
+        - Badge
+        - forms
+            - SelectField
+            - TextInputField
+        - providers
+            - TanstackProvider - To wrap the whole app.
+    - context-providers folder
+        - Contains the AuthProvider ContextAPI.
+    - public folder
+        - contains assets, images, icons.
+    - services folder
+        - contains the API endpoints making the HTTP requests.
+    - utils: contains a file UtilsKit containing common, generic, reusabled uitility functions.
+- Inside the app directory
+    - books - The protected route books.
+    - login - The login route
+    - find-books - The public route find books.
+    - components - contains components of the landing page which is this layer's page.jsx
+    - layout.jsx: This file contains the calling of fonts, wrapping of the Tanstack and Auth provider and the layout of the landing page.
+    - not-found.jsx: 404 page.
+- Inside books/find-books
+    - The page.jsx file contains the code of the respective pages.
+    - layout.jsx: contains the layout of the page. The AuthGuardHOC wraps the books page in this layout file.
+    - components: Contains all components used in this respective page.
+        - skeleton: contains components of the skeleton that loads while fetching data
+        - error: contains components of the error that loads while the server is compromised.
+- The globals.css file uses TailwindCSS imports, and tailwind classes can be seen in the JSX code.
+
 ### 3. TECHNOLOGIES USED
 
 1. NextJS - A ReactJS Framework
